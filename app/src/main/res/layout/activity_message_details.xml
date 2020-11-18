@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/first_letter_layout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/curved_text_container"
+        android:layout_margin="@dimen/space40">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="K"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/from_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/first_letter_layout"
+        app:layout_constraintTop_toTopOf="@id/first_letter_layout"
+        android:layout_marginLeft="@dimen/space10"
+        android:textColor="@color/black"
+        android:text="From : KevinMirera@gmail.com"
+        android:layout_marginTop="@dimen/space5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/first_letter_layout"
+        app:layout_constraintTop_toBottomOf="@id/from_tv"
+        android:layout_marginLeft="@dimen/space10"
+        android:textColor="@color/black"
+        android:text="Date : 4/3/2020"
+        android:layout_marginTop="@dimen/space5"/>
+
+    <RelativeLayout
+        android:id="@+id/message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_letter_layout"
+        android:background="@drawable/curved_text_container"
+        android:layout_margin="@dimen/space40"
+        android:padding="@dimen/space20">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem"
+            android:textColor="#000"
+            android:textStyle="normal"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/validate_pop_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:text="Reply"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space40"
+        android:layout_marginRight="@dimen/space40"
+        android:layout_marginLeft="@dimen/space40"
+        android:layout_marginBottom="@dimen/space40"
+        android:layoutDirection="rtl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message_layout"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

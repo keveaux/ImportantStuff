@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/messages_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:paddingTop="@dimen/space20">
+
+    <TextView
+        android:id="@+id/messages_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/messages"
+        android:textStyle="bold"
+        android:textSize="21sp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/messages_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/curved_layout"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="4"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+
+            />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/add_keyword_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/space5"
+        android:layout_marginRight="@dimen/space20"
+        android:tint="@color/colorPrimary"
+        android:background="@color/colorPrimaryFaded"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/spinner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/messages_layout"
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerTariffCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginRight="@dimen/space10"
+            android:layout_marginTop="@dimen/space20"
+            android:background="@drawable/spinner"
+            android:spinnerMode="dropdown"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_date"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/space10"
+            android:layout_marginRight="@dimen/space20"
+            android:layout_marginTop="@dimen/space20"
+            android:background="@drawable/spinner"
+            android:spinnerMode="dropdown"
+            android:layout_weight="1.61803398875"/>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightgrey"
+        app:layout_constraintTop_toBottomOf="@id/spinner_layout"
+        android:layout_marginTop="@dimen/space20"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        tools:listitem="@layout/messages_layout_rv"
+        android:layoutAnimation="@anim/recyclerview_anim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

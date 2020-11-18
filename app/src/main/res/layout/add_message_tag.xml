@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/tag"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_marginLeft="@dimen/space10"
+        android:layout_marginBottom="@dimen/space20"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/space20"
+        android:text="@string/add_keyword"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space10"
+        android:layout_marginLeft="@dimen/space20"
+        android:layout_marginRight="@dimen/space20"
+        android:text="Add a keyword. The key word added will be used to filter your emails and sms e.g meeting or appointment"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space40"
+        android:layout_marginRight="@dimen/space40"
+        android:layout_marginTop="@dimen/space20"
+
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/space10"
+            android:textSize="13sp"
+            android:hint="@string/keyword"
+            android:lines="1"
+            android:inputType="number"
+            app:backgroundTint="@color/black"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/validate_pop_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:text="ADD"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space20"
+        android:layout_marginRight="@dimen/space40"
+        android:layout_marginLeft="@dimen/space40"
+        android:layout_marginBottom="@dimen/space40"
+        android:layoutDirection="rtl"
+        />
+
+</LinearLayout>

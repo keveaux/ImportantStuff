@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/message_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space10"
+        >
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="@dimen/space10"
+            android:layout_height="@dimen/space10"
+            android:src="@drawable/ic_circle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space20"
+            android:layout_marginTop="@dimen/space20"
+            />
+
+        <TextView
+            android:id="@+id/message_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space40"
+            android:text="Meeting"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18sp"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_title_layout"
+        android:layout_toLeftOf="@id/date_tv"
+
+        >
+        <TextView
+            android:id="@+id/message_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space40"
+            android:text="You are required to attend the following meeting on this date"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/space10"
+            android:textColor="@color/black"
+            />
+
+
+
+        <TextView
+            android:id="@+id/message_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space40"
+            android:text="EMAIL"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:layout_below="@id/message_tv"
+            android:layout_marginTop="@dimen/space20"
+            android:background="@drawable/curved_layout_blank"
+            android:paddingLeft="@dimen/space10"
+            android:paddingRight="@dimen/space10"
+            android:paddingBottom="@dimen/space5"
+            android:paddingTop="@dimen/space5"
+            android:textSize="13sp"/>
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space40"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="5:30 am"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:layout_marginRight="@dimen/space20"
+        android:textColor="#80707070"
+       />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightgrey"
+        android:layout_below="@id/message_content_layout"
+        android:layout_marginTop="@dimen/space10"/>
+
+</RelativeLayout>
